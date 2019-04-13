@@ -35,8 +35,8 @@ const char *
 unescape(const char *in, char *out, size_t outsiz)
 {
 	int		 i, j, esc = 0;
-	uint16_t	 W1, W2;
-	uint32_t	 U;
+	u_int16_t	 W1, W2;
+	u_int32_t	 U;
 
 	for (i = 0, j = 0; in[i] != '\0'; i++) {
 		if (j >= outsiz)
