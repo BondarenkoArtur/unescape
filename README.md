@@ -1,6 +1,20 @@
 unescape.c
 ==========
 
+Small utilite that helps you to unescape some JSON's escaped UTF-8 encoded strings.
+`unescape_pipe` allows you to push some data in it and receive properly encoded string.
+
+To build use Cmake or gcc
+`gcc -o unescape_pipe unescape_pipe.c unescape.c`
+
+To use, just pipe something into `unescape_pipe`
+```
+$ export test='\uD83D\uDE01 \uD83D\uDE18 \u2764\uFE0F \uD83D\uDE0A \uD83D\uDC4D'
+$ printf '%s' "${test}" | ./unescape_pipe
+😁 😘 ❤️ 😊 👍
+```
+
+### Old description
 Simple implementation which unescapes JSON's escaped UTF-8 encoded strings.
 
 Example:
